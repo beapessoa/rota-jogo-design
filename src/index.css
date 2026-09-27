@@ -1,0 +1,231 @@
+:root {
+  --navy: #23357f;
+  --navy-deep: #16234f;
+  --navy-soft: #3b54b0;
+  --navy-soft-deep: #27398a;
+  --orange: #ec6c20;
+  --orange-deep: #bf5010;
+  --orange-soft: #f58535;
+  --orange-soft-deep: #d2661a;
+
+  --surface: #ffffff;
+  --surface-alt: #eef1f8;
+  --ink: #23357f;
+  --muted: #7c88a8;
+  --line: #e7ebf3;
+  --field-bg: #edf0f7;
+
+  --page-bg: #e8edf5;
+  --cream: #fbf3e6;
+  --cream-alt: #faf3e9;
+  --cream-shadow: #efdcc2;
+  --cream-line: #e6d4ba;
+
+  --font: 'Archivo', system-ui, sans-serif;
+  --card-shadow: 0 8px 20px rgba(35, 53, 127, 0.07);
+  --card-radius: 26px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--page-bg);
+  font-family: var(--font);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+a {
+  color: var(--navy);
+}
+
+button {
+  font-family: var(--font);
+}
+
+input {
+  font-family: var(--font);
+}
+
+input::placeholder {
+  color: currentColor;
+  opacity: 0.45;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+@keyframes revealOpen {
+  from {
+    clip-path: circle(0% at 50% 58%);
+  }
+  to {
+    clip-path: circle(140% at 50% 58%);
+  }
+}
+@keyframes discPop {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes revealTextIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes wizardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(-5deg);
+  }
+}
+@keyframes floatWizard {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-4deg);
+  }
+}
+@keyframes wizardStraight {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes btnGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes sheetUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-46px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(46px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-8deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2) rotate(4deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(34px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes starBurst {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3) rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(1) rotate(25deg);
+  }
+}

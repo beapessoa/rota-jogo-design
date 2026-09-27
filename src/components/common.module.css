@@ -1,0 +1,152 @@
+.card {
+  background: var(--surface);
+  border-radius: var(--card-radius);
+  padding: 22px 20px;
+  margin-bottom: 14px;
+  box-shadow: var(--card-shadow);
+}
+
+.cardFlat {
+  background: var(--surface);
+  border-radius: var(--card-radius);
+  padding: 22px 20px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 0 var(--cream-shadow);
+}
+
+.rankingCard {
+  max-height: 560px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  height: 56px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+  letter-spacing: -0.01em;
+  transition: transform 0.06s ease, box-shadow 0.06s ease;
+  text-align: center;
+}
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: inset 0 3px 8px rgba(11, 29, 54, 0.2);
+}
+.btnNavy {
+  background: var(--navy-soft);
+  color: #ffffff;
+  box-shadow: 0 4px 0 var(--navy-soft-deep);
+}
+.btnOrange {
+  background: var(--orange-soft);
+  color: #ffffff;
+  box-shadow: 0 4px 0 var(--orange-soft-deep);
+}
+.btnGhost {
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 700;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 0 var(--cream-shadow);
+}
+
+.field {
+  margin-bottom: 14px;
+}
+.field:last-child {
+  margin-bottom: 0;
+}
+.inputLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--orange-deep);
+  margin-bottom: 7px;
+}
+.inputField {
+  width: 100%;
+  height: 50px;
+  padding: 0 18px;
+  border-radius: 14px;
+  border: none;
+  background: #fff8f2;
+  color: var(--ink);
+  font-size: 15px;
+  font-family: var(--font);
+  font-weight: 500;
+  outline: none;
+}
+.inputField::placeholder {
+  color: #b7a99c;
+  opacity: 1;
+}
+
+.listRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 0;
+  border-top: 1px solid var(--line);
+  cursor: pointer;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font);
+}
+.listRow:first-child {
+  border-top: none;
+}
+
+.track {
+  width: 46px;
+  height: 28px;
+  border-radius: 14px;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.18s ease;
+  background: var(--line);
+  border: none;
+  padding: 0;
+}
+.track.on {
+  background: var(--navy);
+}
+.knob {
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  background: #ffffff;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: left 0.18s ease;
+}
+.track.on .knob {
+  left: 21px;
+}
+
+.btnStack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.kicker {
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+}

@@ -1,0 +1,39 @@
+.shell {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  background: var(--page-bg);
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.scrollArea {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 720px) {
+  .shell {
+    padding: 32px 16px;
+    align-items: flex-start;
+  }
+  .frame {
+    max-width: 460px;
+    height: calc(100dvh - 64px);
+    border-radius: 32px;
+    box-shadow: 0 24px 60px rgba(16, 28, 60, 0.18);
+  }
+}

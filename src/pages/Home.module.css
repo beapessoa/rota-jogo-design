@@ -1,0 +1,206 @@
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.skyStage {
+  position: relative;
+  flex: 1;
+  min-height: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 0 0 34px 34px;
+  background-size: cover;
+  background-position: center 70%;
+  background-repeat: no-repeat;
+  box-shadow: 0 6px 0 var(--cream-shadow);
+}
+
+.skyHeader {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 18px 0;
+  z-index: 3;
+}
+
+.xpPill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 9px 13px 9px 11px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(35, 53, 127, 0.1);
+  border: none;
+}
+
+.xpPillDot {
+  width: 30px;
+  height: 30px;
+  background-image: url('/images/star-blue.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+  margin: -4px 0;
+}
+
+.xpPillValue {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.avatarChip {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--surface);
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(35, 53, 127, 0.12);
+  padding: 0;
+}
+
+.avatarFill {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.skyTextBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 58px;
+  padding: 0 28px;
+  z-index: 3;
+  animation: riseIn 0.6s 0.1s ease both;
+}
+
+.skyHeadline {
+  font-size: 34px;
+  line-height: 1.02;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.headlineStrong {
+  font-weight: 800;
+}
+
+.wizardStage {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 250px;
+}
+
+.wizard {
+  position: relative;
+  width: 460px;
+  height: 480px;
+  margin-bottom: 40px;
+  animation: wizardStraight 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  pointer-events: none;
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.playWrap {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 24px;
+  z-index: 4;
+  animation: riseIn 0.5s 0.35s ease both;
+}
+
+.playBtn {
+  width: 100%;
+  height: 66px;
+  border-radius: 22px;
+  border: 1.5px solid #ffd9ae;
+  background: linear-gradient(120deg, #f27a2a 0%, #ffb35c 25%, #e0641a 50%, #ffb35c 75%, #f27a2a 100%);
+  background-size: 300% 300%;
+  animation: btnGradient 14s ease-in-out infinite;
+  color: #ffffff;
+  font-family: var(--font);
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  box-shadow: 0 6px 0 var(--orange-soft-deep);
+  text-shadow: 0 2px 0 rgba(170, 70, 10, 0.4);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+.playBtn:active {
+  transform: translateY(5px);
+  box-shadow: 0 1px 0 var(--orange-soft-deep);
+}
+
+.creamBar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 18px 12px;
+  animation: riseIn 0.5s 0.45s ease both;
+  flex-shrink: 0;
+}
+
+.creamStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.creamTile {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 12px 8px 13px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 0 var(--cream-shadow);
+  border: none;
+  font-family: var(--font);
+}
+
+.creamIcon {
+  width: 46px;
+  height: 40px;
+  margin: 0 auto 4px;
+  background-repeat: no-repeat;
+}
+
+.creamTileValue {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.creamTileLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-top: 1px;
+}

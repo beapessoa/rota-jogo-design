@@ -1,0 +1,109 @@
+.wrap {
+  position: relative;
+  flex: 1;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: url('/images/bg-sky.png') center 30% / cover no-repeat;
+}
+
+.logoRow {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 28px 24px 0;
+}
+
+.wordmark {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  text-shadow: 0 2px 0 rgba(30, 70, 170, 0.35);
+}
+
+.wizard {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -230px;
+  width: 460px;
+  height: 500px;
+  background-image: url('/images/wizard-login.png');
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 12px 16px rgba(35, 53, 127, 0.25));
+  animation: floatWizard 5s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.centerWrap {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px 24px 40px;
+}
+
+.card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 340px;
+  background: var(--surface);
+  border-radius: 26px;
+  padding: 20px 18px 22px;
+  box-shadow: var(--card-shadow);
+}
+
+.tabRow {
+  display: flex;
+  gap: 0;
+  background: #f3e7d6;
+  border-radius: 14px;
+  padding: 4px;
+  margin-bottom: 18px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 11px 0;
+  border-radius: 11px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  background: transparent;
+  color: rgba(35, 53, 127, 0.45);
+  border: none;
+  font-family: var(--font);
+}
+
+.tab.active {
+  background: #ffffff;
+  color: var(--navy);
+  box-shadow: 0 2px 6px rgba(35, 53, 127, 0.12);
+}
+
+.footNote {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-top: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.linkOrange {
+  color: var(--orange);
+  font-weight: 800;
+  cursor: pointer;
+}
