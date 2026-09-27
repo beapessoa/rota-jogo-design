@@ -1,3 +1,16 @@
+/* Keyframes are duplicated locally in each CSS module: Vite scopes animation-name
+   references inside a .module.css file, so a shared global @keyframes (e.g. in index.css)
+   never matches and the animation silently never plays. */
+@keyframes floatWizard {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-4deg);
+  }
+}
+
 .wrap {
   position: relative;
   flex: 1;

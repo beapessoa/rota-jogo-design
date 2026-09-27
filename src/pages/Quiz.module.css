@@ -1,3 +1,30 @@
+/* Local copies: Vite scopes animation-name inside a .module.css, so a shared
+   global @keyframes (index.css) never matches here — see Entrada.module.css. */
+@keyframes btnGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes starBurst {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3) rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(1) rotate(25deg);
+  }
+}
+
 .body {
   padding: 22px 18px 16px;
   display: flex;

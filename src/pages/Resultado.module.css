@@ -1,3 +1,16 @@
+/* Local copy: Vite scopes animation-name inside a .module.css, so a shared
+   global @keyframes (index.css) never matches here — see Entrada.module.css. */
+@keyframes wizardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(-5deg);
+  }
+}
+
 .wrap {
   min-height: 100%;
   flex: 1;
