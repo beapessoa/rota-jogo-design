@@ -4,8 +4,14 @@
     {
       "name": "quiz-dev",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": ["--prefix", "react", "run", "dev"],
       "port": 5173
+    },
+    {
+      "name": "quiz-html-build",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--yes", "serve", "-s", "-l", "4173", "html"],
+      "port": 4173
     }
   ]
 }
